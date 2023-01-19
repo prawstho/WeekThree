@@ -22,6 +22,11 @@ const server = http.createServer((request, response) => {
             response.statusCode = 200;
             fetchFile(path);
             break;
+        case '/puppies':
+            path += "puppies.html";
+            response.statusCode = 200;
+            fetchFile(path);
+            break;
         case '/about-me':
             response.statusCode = 301;
             response.setHeader('Location', '/about');
